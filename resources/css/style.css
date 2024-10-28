@@ -1,0 +1,81 @@
+
+/* Processing Loader */
+.loader {
+  width: 150px;
+  height: 5px;
+  background-color: #0F3D5C;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.child {
+  width: 60px;
+  height: 5px;
+  background-color: #E76727;
+  border-radius: 20px;
+  z-index: 0;
+  margin-left: -60px;
+  animation: go 1s 0s infinite;
+}
+
+@keyframes go {
+  from {
+    margin-left: -100px;
+    width: 80px;
+  }
+
+  to {
+    width: 50px;
+    margin-left: 110px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.text {
+  width: 150px;
+  height: 30px;
+  background-color: transparent;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.text::before {
+  content: "Loading";
+  color: #57575B;
+  animation: text 1s 0s infinite;
+}
+
+@keyframes text {
+  0% {
+    content: "Process is running";
+  }
+
+  30% {
+    content: "Process is running.";
+  }
+
+  60% {
+    content: "Process is running..";
+  }
+
+  100% {
+    content: "Process is running...";
+  }
+}
+/* Processing Loader */
+
+
+/* Alert Message Settings */
+.alert-enter-active,
+.alert-leave-active {
+  transition: opacity 0.5s;
+}
+
+.alert-enter-from,
+.alert-leave-to {
+  opacity: 0;
+}
+/* Alert Message Settings */
